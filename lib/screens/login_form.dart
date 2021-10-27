@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_login_b/widgets.dart';
 class Loginform extends StatefulWidget {
   @override
   _LoginformState createState() => _LoginformState();
@@ -41,7 +41,9 @@ class _LoginformState extends State<Loginform> {
                 ),
                 obscureText: true,
                 keyboardType: TextInputType.emailAddress,
-              )
+              ),
+               const SizedBox(height:10,),
+              MyButton(),
             ],
           ),
         )
