@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_b/widgets.dart';
-class Loginform extends StatefulWidget {
+class RegisterForm extends StatefulWidget {
   @override
-  _LoginformState createState() => _LoginformState();
+  _RegisterFormState createState() => _RegisterFormState();
 }
 
-class _LoginformState extends State<Loginform> {
+class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -42,8 +42,16 @@ class _LoginformState extends State<Loginform> {
                 obscureText: true,
                 keyboardType: TextInputType.emailAddress,
               ),
-               const SizedBox(height:10,),
-              MyButton(),
+              const SizedBox(height:10,),
+              MyButton(
+                width: 200,
+                height: 50,
+                onPressed: () {
+
+                },
+                text: Text('Register'),
+                icon: Icon(Icons.arrow_forward),
+              ),
             ],
           ),
         )
