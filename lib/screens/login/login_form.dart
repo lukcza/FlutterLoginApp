@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_login_b/screens/register/register_form.dart';
 import 'package:flutter_login_b/widgets.dart';
 import 'package:flutter_login_b/screens.dart';
 class Loginform extends StatefulWidget {
-  const Loginform({Key? key}) : super(key: key);
-
   @override
   _LoginformState createState() => _LoginformState();
 }
@@ -61,10 +60,10 @@ class _LoginformState extends State<Loginform> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: () {
-                       return RegisterScreen();
+                      builder: (context) {
+                       return const RegisterScreen();
                       }
-                    )
+                    ),
                   );
                 },
                 text: Text('Register'),

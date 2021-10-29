@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_login_b/screens.dart';
 import 'package:flutter_login_b/widgets.dart';
 class RegisterForm extends StatefulWidget {
   @override
@@ -40,14 +41,28 @@ class _RegisterFormState extends State<RegisterForm> {
                   icon: Icon(Icons.lock),
                 ),
                 obscureText: true,
-                keyboardType: TextInputType.emailAddress,
+              ),
+              const SizedBox(height:10,),
+              TextFormField(
+                autovalidateMode: AutovalidateMode.always,
+                controller: _passwordController,
+                decoration: const InputDecoration(
+                  hintText: "repeat password",
+                  icon: Icon(Icons.lock),
+                ),
+                obscureText: true,
               ),
               const SizedBox(height:10,),
               MyButton(
                 width: 200,
                 height: 50,
                 onPressed: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context)=> const LoginScreen()
+                  ),
+                  );
                 },
                 text: Text('Register'),
                 icon: Icon(Icons.arrow_forward),
