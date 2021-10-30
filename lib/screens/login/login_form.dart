@@ -48,7 +48,16 @@ class _LoginformState extends State<Loginform> {
               MyButton(
                 width: 200,
                 height: 50,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) {
+                          return const RegisterScreen();
+                        }
+                    ),
+                  );
+                },
                 text: Text('Login'),
                 icon: Icon(Icons.check),
               ),
