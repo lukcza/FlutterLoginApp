@@ -10,6 +10,7 @@ class RegisterForm extends StatefulWidget {
 class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordController2 = TextEditingController();
 
   @override
   void initState() {
@@ -45,7 +46,7 @@ class _RegisterFormState extends State<RegisterForm> {
               const SizedBox(height:10,),
               TextFormField(
                 autovalidateMode: AutovalidateMode.always,
-                controller: _passwordController,
+                controller: _passwordController2,
                 decoration: const InputDecoration(
                   hintText: "repeat password",
                   icon: Icon(Icons.lock),
