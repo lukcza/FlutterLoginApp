@@ -53,7 +53,7 @@ class _LoginformState extends State<Loginform> {
                     context,
                     MaterialPageRoute(
                         builder: (context) {
-                          return const RegisterScreen();
+                          return MainPage();
                         }
                     ),
                   );
